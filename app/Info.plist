@@ -5,7 +5,7 @@
 <dict>
   <!-- Nombre visible de la app -->
   <key>CFBundleName</key>
-  <string>MyFltkApp</string>
+  <string>UrlOpener</string>
 
   <!-- Nombre del ejecutable (debe coincidir con el binario en Contents/MacOS) -->
   <key>CFBundleExecutable</key>
