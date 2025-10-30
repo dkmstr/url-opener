@@ -1,6 +1,5 @@
 use std::io::Write;
 
-use fltk::utils::oncelock::Lazy;
 use objc2::rc::Retained;
 use objc2::runtime::{NSObject, NSObjectProtocol, ProtocolObject};
 use objc2::{MainThreadMarker, MainThreadOnly, define_class, msg_send};
