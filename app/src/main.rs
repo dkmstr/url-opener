@@ -1,4 +1,5 @@
 use std::io::Write;
+use std::sync::LazyLock;
 
 use objc2::rc::Retained;
 use objc2::runtime::{NSObject, NSObjectProtocol, ProtocolObject};
@@ -6,8 +7,8 @@ use objc2::{MainThreadMarker, MainThreadOnly, define_class, msg_send};
 use objc2_app_kit::{NSApplication, NSApplicationActivationPolicy, NSApplicationDelegate};
 use objc2_foundation::{NSArray, NSNotification, NSString, NSURL};
 
-static LOGFILE: Lazy<std::path::PathBuf> =
-    Lazy::new(|| std::env::temp_dir().join("url_opener_output.txt"));
+static LOGFILE: LazyLock<std::path::PathBuf> =
+    LazyLock::new(|| std::env::temp_dir().join("url_opener_output.txt"));
 
 
 fn log_message(message: &str) {
